@@ -6,7 +6,6 @@
 
 package org.jortiz.ut.pjt.c3;
 
-import java.math.BigDecimal;
 import junitparams.JUnitParamsRunner;
 import org.junit.runner.RunWith;
 import static junitparams.JUnitParamsRunner.$;
@@ -24,8 +23,8 @@ import org.junit.Test;
 @RunWith(JUnitParamsRunner.class)
 public class StatisticsUtilsParameterizedTest {
 
-    public static final Object[] getValores(){
-        return $(1);
+    public static final Object getValores(){
+        return $($(1));
     }
     
     @Test
@@ -37,8 +36,8 @@ public class StatisticsUtilsParameterizedTest {
     
     }
     
-    public static final Object[] getValoresInvalidos(){
-        return new Object[]{new Object[]{}, null};
+    public static final Object getValoresInvalidos(){
+        return new Object[]{null, new Integer[]{}};
     }
     
     @Test(expected = IllegalArgumentException.class)
