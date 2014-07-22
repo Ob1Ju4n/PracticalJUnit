@@ -23,21 +23,30 @@ import org.junit.Test;
 @RunWith(JUnitParamsRunner.class)
 public class StatisticsUtilsParameterizedTest {
 
-    public static final Object getValores(){
-        return $($(1));
+    private static Object[] getValores(){
+    
+        Object[] objects = new Object[5];
+        objects[0] = new Object[]{new Integer[]{1}};
+        objects[1] = new Object[]{new Integer[]{1,1}};
+        objects[2] = new Object[]{new Integer[]{1,1,1}};
+        objects[3] = new Object[]{new Integer[]{1,1,1,1}};
+        objects[4] = new Object[]{new Integer[]{1,1,1,1,1}};
+        
+        return objects;
+        
     }
     
     @Test
     @Parameters(method = "getValores" )
     public void calcularPromedioDebeSerUno(Integer... args){
         
-        int expectedResult = args.length;
+        int expectedResult = 1;
         assertEquals(expectedResult, StatisticsUtils.calcularPromedio(args));
     
     }
     
     public static final Object getValoresInvalidos(){
-        return new Object[]{null, new Integer[]{}};
+        return new Object[]{null, new Object[]{new Integer[]{}}};
     }
     
     @Test(expected = IllegalArgumentException.class)
