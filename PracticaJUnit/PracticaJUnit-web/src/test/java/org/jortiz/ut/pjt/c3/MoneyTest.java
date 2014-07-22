@@ -22,10 +22,10 @@ public class MoneyTest {
     public void constructorDebeEstablecerValorYMoneda(){
 
         /**
-         * Concepcion de un test.
-         * 1. Declarar las entradas del SUT
-         * 2. Poner a prueba el SUT
-         * 3. Evaluar las respuestas
+         * Test conception.
+         * 1. Arrange
+         * 2. Act
+         * 3. Assert
          */
         
         //1.

@@ -35,7 +35,7 @@ public class MoneyParameterizedTest {
     
     /**
      * Dollar sign ($) data providing method.
-     * No acepta null values
+     * Does not accept null values
      * @return Object[]
      */
     public static final Object[] getMoneyLessVerbose(){
