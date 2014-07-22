@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package org.jortiz.ut.pjt;
+package org.jortiz.ut.pjt.c3;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
