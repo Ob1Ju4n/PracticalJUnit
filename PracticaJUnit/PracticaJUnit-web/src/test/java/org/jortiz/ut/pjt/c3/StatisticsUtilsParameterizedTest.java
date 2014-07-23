@@ -8,7 +8,6 @@ package org.jortiz.ut.pjt.c3;
 
 import junitparams.JUnitParamsRunner;
 import org.junit.runner.RunWith;
-import static junitparams.JUnitParamsRunner.$;
 import junitparams.Parameters;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
