@@ -6,11 +6,9 @@
 
 package org.jortiz.ut.pjt.c3;
 
-import java.util.Map;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import static org.junit.Assert.*;
-import static junitparams.JUnitParamsRunner.$;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -23,7 +21,13 @@ import org.junit.runner.RunWith;
 public class FarenheitCelciusConverterTest {
 
     public Object[] getToFarenheitValues(){
-        return $($(32,0),$(98,37),$(212,100));
+        
+        Object[] objects = new Object[3];
+        objects[0] = new Object[]{new Object[]{32,0}};
+        objects[1] = new Object[]{new Object[]{98,37}};
+        objects[2] = new Object[]{new Object[]{212,100}};
+        return objects;
+        
     }
     
     @Test
@@ -33,13 +37,19 @@ public class FarenheitCelciusConverterTest {
     }
     
     public Object[] getToCelciusValues(){
-        return $($(0,32),$(37,100),$(100,212));
+        
+        Object[] objects = new Object[3];
+        objects[0] = new Object[]{new Object[]{0,32}};
+        objects[1] = new Object[]{new Object[]{37,100}};
+        objects[2] = new Object[]{new Object[]{100,212}};
+        return objects;
+        
     }
     
     @Test
     @Parameters(method = "getToCelciusValues")
     public void shouldConvertFarenheitToCelcius(Object[] values){
-        assertEquals(values[1], FarenheitCelciusConverter.toCelcius((Integer)values[0]));
+        assertEquals(values[0], FarenheitCelciusConverter.toCelcius((Integer)values[1]));
     }
     
 }
