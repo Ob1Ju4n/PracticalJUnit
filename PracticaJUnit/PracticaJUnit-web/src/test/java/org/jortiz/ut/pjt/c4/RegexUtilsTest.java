@@ -8,7 +8,7 @@ package org.jortiz.ut.pjt.c4;
 
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
-import org.jortiz.ut.pjt.c3.RegexUtils;
+
 import static org.junit.Assert.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;

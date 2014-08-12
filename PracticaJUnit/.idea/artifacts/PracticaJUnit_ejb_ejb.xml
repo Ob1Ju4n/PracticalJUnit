@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="PracticaJUnit-ejb:ejb">
+    <output-path>$PROJECT_DIR$/PracticaJUnit-ejb/target</output-path>
+    <root id="archive" name="PracticaJUnit-ejb-1.0-SNAPSHOT.jar">
+      <element id="artifact" artifact-name="PracticaJUnit-ejb:ejb exploded" />
+    </root>
+  </artifact>
+</component>
